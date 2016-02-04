@@ -10,6 +10,16 @@
 <body>
     <div>MicroBlog: <a href="/index">Home</a></div>
     <hr>
+    <!-- 模板需要加入展示消息的内容。我们将添加这些消息到我们的基础模板中，这样所有的模板都能继承这个函数 -->
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li>{{message}}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
     {% block content %} {% endblock %}
 </body>
 </html>
