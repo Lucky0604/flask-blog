@@ -9,3 +9,7 @@ use virtual env.
     python 3.4.3+
     (<directory>) $ deactivate
     $ 
+
+### Add login page use OpenID  
+Rewrite the login page, use real username and password.  
+you can login the page use your own openid (it's better use yahoo)
